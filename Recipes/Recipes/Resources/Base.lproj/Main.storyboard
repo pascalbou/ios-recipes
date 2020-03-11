@@ -78,7 +78,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="VHx-yw-S9z" kind="show" identifier="CellDetailSegue" id="Zac-Eh-jgQ"/>
+                                    <segue destination="VHx-yw-S9z" kind="show" identifier="RecipeDetailSegue" id="Zac-Eh-jgQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
