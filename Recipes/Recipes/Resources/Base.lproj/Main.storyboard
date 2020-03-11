@@ -92,21 +92,50 @@
             </objects>
             <point key="canvasLocation" x="1815" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe Detail View Controller-->
         <scene sceneID="Jhl-oR-7Hm">
             <objects>
-                <viewController id="VHx-yw-S9z" sceneMemberID="viewController">
+                <viewController id="VHx-yw-S9z" customClass="RecipeDetailViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8yg-bz-zhR">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="537"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hb-iZ-xeV">
+                                <rect key="frame" x="16" y="0.0" width="311" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WRq-Zc-Xvk">
+                                <rect key="frame" x="16" y="46" width="311" height="475"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3Hb-iZ-xeV" firstAttribute="leading" secondItem="O5H-xS-VIz" secondAttribute="leading" constant="16" id="AWV-kt-Nba"/>
+                            <constraint firstItem="3Hb-iZ-xeV" firstAttribute="top" secondItem="O5H-xS-VIz" secondAttribute="top" id="S2E-hJ-vJP"/>
+                            <constraint firstItem="O5H-xS-VIz" firstAttribute="bottom" secondItem="WRq-Zc-Xvk" secondAttribute="bottom" constant="16" id="VW4-UW-1pl"/>
+                            <constraint firstItem="WRq-Zc-Xvk" firstAttribute="leading" secondItem="O5H-xS-VIz" secondAttribute="leading" constant="16" id="YB3-Vf-9wA"/>
+                            <constraint firstItem="O5H-xS-VIz" firstAttribute="trailing" secondItem="WRq-Zc-Xvk" secondAttribute="trailing" constant="16" id="ZJQ-ar-uRX"/>
+                            <constraint firstItem="O5H-xS-VIz" firstAttribute="trailing" secondItem="3Hb-iZ-xeV" secondAttribute="trailing" constant="16" id="ZMY-Tb-FtZ"/>
+                            <constraint firstItem="WRq-Zc-Xvk" firstAttribute="top" secondItem="3Hb-iZ-xeV" secondAttribute="bottom" constant="16" id="k37-7w-MOP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O5H-xS-VIz"/>
                     </view>
                     <navigationItem key="navigationItem" id="f4t-zM-ABF"/>
+                    <connections>
+                        <outlet property="recipeDescription" destination="WRq-Zc-Xvk" id="HPc-A7-Qmv"/>
+                        <outlet property="recipeLabel" destination="3Hb-iZ-xeV" id="wfM-ZY-ecd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nc-dW-HPN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2553" y="134"/>
+            <point key="canvasLocation" x="2552.8000000000002" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="paw-pT-qJN">
