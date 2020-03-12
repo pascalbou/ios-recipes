@@ -20,13 +20,13 @@ class MainViewController: UIViewController {
     
     var recipesTableViewController: RecipesTableViewController? {
         didSet {
-            filteredRecipes = recipesTableViewController?.recipes ?? []
+            recipesTableViewController?.recipes = filteredRecipes
         }
     }
     
     var filteredRecipes: [Recipe] = [] {
         didSet {
-            filteredRecipes = recipesTableViewController?.recipes ?? []
+            recipesTableViewController?.recipes = filteredRecipes
         }
     }
     
@@ -48,7 +48,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        networkClient.fetchRecipes { (recipes, error) in
+        networkClient.fetchRecipes { recipes, error in
             if let error = error {
                 NSLog("Error fetching recipes: \(error)")
                 return
