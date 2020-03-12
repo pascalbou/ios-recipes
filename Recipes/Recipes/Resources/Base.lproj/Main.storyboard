@@ -130,7 +130,9 @@
                     <navigationItem key="navigationItem" id="f4t-zM-ABF"/>
                     <connections>
                         <outlet property="recipeDescription" destination="WRq-Zc-Xvk" id="HPc-A7-Qmv"/>
+                        <outlet property="recipeInstructionsTextView" destination="WRq-Zc-Xvk" id="Vgi-EN-e0C"/>
                         <outlet property="recipeLabel" destination="3Hb-iZ-xeV" id="wfM-ZY-ecd"/>
+                        <outlet property="recipeNameLabel" destination="3Hb-iZ-xeV" id="CW5-Ol-l5h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nc-dW-HPN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

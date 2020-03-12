@@ -8,23 +8,23 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
-    let networkClient = RecipesNetworkClient()
+    private let networkClient = RecipesNetworkClient()
     
-    var allRecipes: [Recipe] = [] {
+    private var allRecipes: [Recipe] = [] {
         didSet {
             filterRecipes()
         }
     }
     
-    var recipesTableViewController: RecipesTableViewController? {
+    private var recipesTableViewController: RecipesTableViewController? {
         didSet {
             recipesTableViewController?.recipes = filteredRecipes
         }
     }
     
-    var filteredRecipes: [Recipe] = [] {
+    private var filteredRecipes: [Recipe] = [] {
         didSet {
             recipesTableViewController?.recipes = filteredRecipes
         }
